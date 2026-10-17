@@ -1,0 +1,18 @@
+# ignore everything by default
+*
+# but still look inside folders
+!*/
+# keep only these
+!.gitignore
+!*.py
+!README.md
+!submission_checklist.md
+!requirements.txt
+# and never these, even though they contain .py files
+.venv/
+__pycache__/
+notes/
+CMSC 315 - DISCUSSION/
+IntelliJ_Unit_Projects_StudentStarterCode.zip
+repo.rtf
+submission_checklist.md
