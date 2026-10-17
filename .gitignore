@@ -6,7 +6,6 @@
 !.gitignore
 !*.py
 !README.md
-!submission_checklist.md
 !requirements.txt
 # and never these, even though they contain .py files
 .venv/
