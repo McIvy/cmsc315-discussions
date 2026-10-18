@@ -68,7 +68,7 @@ Your reflection should be approximately 150–200 words and address the followin
 3. Compare OOP to procedural programming.
 4. Discuss the benefits of maintainability and reusability and apply this managing overhead, practical application development, and future use.
 
-## My Reflection
+## Reflection
 
 This assignment demonstrated how inheritance, namespaces, and object copying functioned in Python. A constructor with `self` gave each object its own data, and `super().__init__` reused the parent setup. Using `__dict__` showed what each object owned versus what the class shared. The `is` operator proved that a shallow copy shared nested lists while a deep copy stayed independent.
 
