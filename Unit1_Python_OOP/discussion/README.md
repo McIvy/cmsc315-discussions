@@ -36,7 +36,7 @@ python3 unit1_discussion.py
 
 The script required no input. It printed the parent and child objects, the namespace demo, the shallow and deep copy demos, and the extension result.
 
-## Student-Created Extension
+## Extension
 
 `check_projected_budget()` was a method added to `ChildClass`. It counted every item across the nested lists, multiplied the count by an average item cost ($5.00 by default), and compared the estimate to the object's budget. It returned a budget alert when the estimate was over and the amount remaining when it was under. `main()` called it on the Suitland list. 
 
