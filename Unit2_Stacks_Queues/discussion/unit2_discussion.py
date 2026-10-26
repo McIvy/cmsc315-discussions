@@ -28,7 +28,8 @@ class Stack:
 
     def pop(self):
         # DONE: Removed and returned the most recently added value.
-                # What should happen if the stack is empty?
+        # What should happen if the stack is empty?
+        """Removes from the end, the same end push adds to, so the newest item leaves first (LIFO)."""
         # Prevent silent bugs by raising IndexError when empty.
         if self.is_empty():
             raise IndexError("pop from empty stack")
