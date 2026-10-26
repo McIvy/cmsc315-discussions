@@ -52,6 +52,9 @@ class Queue:
     def __init__(self):
         # DONE: Created the internal data structure for the queue.
         # Hint: collections.deque is useful for efficient queue operations.
+        # A deque is used instead of a list because popleft() removes the 
+        # front item in O(1) time. list.pop(0) shifts every remaining item, 
+        # which is O(n).
         self.items = deque()
 
     def enqueue(self, value):
@@ -63,6 +66,7 @@ class Queue:
     def dequeue(self):
         # DONE: Removed and returned the value from the front of the queue.
         # Prevents silent bugs by raising IndexError when queue is empty.
+        # Now popleft() is O(1).
         if self.is_empty():
             raise IndexError("dequeue from empty queue")
         return self.items.popleft()
