@@ -34,3 +34,9 @@ Your reflection should be approximately 150–200 words and address the followin
 1. What concepts or skills did you learn while completing this assignment?
 2. What challenges did you encounter, and how did you overcome them?
 3. Explain the differences between stacks and queues as this relates to real-world applications.
+
+This week’s exercise showed how stacks and queues are built on lower-level structures. I wrapped a list and collections.deque in classes with simple interfaces. This taught me encapsulation, since users never touch the underlying data. I also learned about efficiency. Using collections.deque gives O(1) constant-time removal from the front of a queue. Exception handling was another skill sharpened, because I had to decide how each method behaves when the container is empty.
+
+The main challenge was having to handle those empty calls gracefully. Raising IndexError from pop and dequeue kept the code from failing silently. In parallel, peek and front returned None so a quick look at an empty container did not crash. Another challenge was getting queue access right. A careless front() could have returned the entire container, so I limited it to returning only the first element.
+
+The pancake and jet bridge scenarios showed me how the two structures differ in daily life. A stack served the newest item first, like eating the top pancake from a pile. A queue serves the oldest first, like passengers boarding a jet bridge in the order they arrived. Grounding the code in everyday examples helped me understand these concepts much better.
