@@ -40,7 +40,7 @@ The program output prints each case, including the caught error message. Now the
 
 ## Real-World Scenarios
 1. For queue chose a Jet bridge case. Passengers step onto the bridge in the order they arrive and enter the plane in that same order. The attendant checks the empty bridge at the end which triggers the empty-dequeue case.
-2. The Pancake stack, stack example, the last pancake placed on the pile is the first one eaten.
+2. The Pancake stack, stack example, has the last pancake placed on the pile is the first one eaten.
 
 In software development, stacks power undo history and browser back buttons, while queues power print jobs and customer service lines.
 
@@ -55,10 +55,10 @@ Your reflection should be approximately 150–200 words and address the followin
 3. Explain the differences between stacks and queues as this relates to real-world applications.
 
 ### Concepts & Skills
-This week’s exercise showed how stacks and queues are built on lower-level structures. I wrapped a list and collections.deque in classes with simple interfaces. This taught me encapsulation, since users never touch the underlying data. I also learned about efficiency. Using collections.deque gives O(1) constant-time removal from the front of a queue. Exception handling was another skill sharpened, because I had to decide how each method behaves when the container is empty.
+This week’s exercise showed how stacks and queues are built on lower-level structures. I wrapped a list and collections.deque in classes with simple interfaces, which taught me encapsulation, since users never touch the underlying data. I also learned about efficiency, because collections.deque gives O(1) removal from the front of a queue. Exception handling was another skill, since I had to decide how each method behaves when the container is empty.
 
 ### Challenges & Solutions
-The main challenge was having to handle those empty calls gracefully. Raising IndexError from pop and dequeue kept the code from failing silently. In parallel, peek and front returned None so a quick look at an empty container did not crash. Another challenge was getting queue access right. A careless front() could have returned the entire container, so I limited it to returning only the first element.
+The main challenge was handling empty calls gracefully. pop and dequeue raise IndexError so failures are never silent, while peek and front return None so a quick look does not crash. Getting queue access right was another challenge. A careless front() could return the entire container, so I limited it to the first element.
 
 ### Stack vs Queue
-The pancake and jet bridge scenarios showed me how the two structures differ in daily life. A stack serves the newest item first, like eating the top pancake from a pile. A queue serves the oldest first, like passengers boarding a jet bridge in the order they arrived. Grounding the code in everyday examples helped me understand these concepts much better.
+The pancake and jet bridge scenarios showed how the two structures differ in daily life. A stack serves the newest item first, like eating the top pancake from a pile. A queue serves the oldest first, like passengers boarding a jet bridge in arrival order. Grounding the code in everyday examples helped me understand both.
