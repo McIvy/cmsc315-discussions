@@ -21,7 +21,7 @@ This assignment examines insertion, deletion, and searching in Python lists.
 
 ## Real-World Scenario
 
-In an online shopping cart, items are stored in order. The newest item is often shown at the top. Adding to the top is an insertion at the beginning of the list, index 0, and that forces every other item to shift right. Suppose a product in the middle of an existing 50-item cart goes out of stock. The system first has to find it using a linear search. Then the system has to delete it and every item after it has to shift left to close the gap. Edge case 5 in this script models both steps with search_value and delete_at. If the product is no longer in the cart, the search returns -1 and nothing is deleted, which protects the cart from a bad removal.
+A Python list keeps items in order by index. Inserting an item shifts every item after it to the right and deleting an item shifts the items after it to the left to close the gap. Searching an unsorted list means checking items one at a time until a match is found. An online shopping cart shows all three. The newest item is often shown at the top, so adding it is an insertion at index 0 and every other item shifts right. Suppose a product in the middle of a 50-item cart goes out of stock. The system first finds it using a linear search and then deletes it then every item after it shifts left. Edge case 5 in this script models both steps with search_value and delete_at. If the product is no longer in the cart, the search returns -1 and nothing is deleted, which protects the cart from a bad removal.
 
 
 ## Discussion Board Reflection
