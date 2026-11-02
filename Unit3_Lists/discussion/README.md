@@ -4,6 +4,8 @@
 
 This assignment examines insertion, deletion, and searching in Python lists.
 
+The starter file provided the function stubs, test sections, and a two edge case minimum. My version adds a reusable baseline list for each test section and five edge cases. The last edge case is a shopping cart scenario.
+
 ## Learning Objectives
 
 - Insert values into a list
@@ -39,4 +41,4 @@ In this assignment I learned how Python lists handle insertion, deletion, and se
 
 My biggest challenge was list mutability. My insertion and deletion tests changed the same list in place, so 20 was gone before the search ran and the search returned -1. I fixed it by keeping a constant baseline list and using copy() to give each test section a fresh list. I also fixed NameError problems by moving variables into the right scope, and I learned that code placed after a return statement never runs. I chose try/except (EAFP) in delete_at so a bad index returned None instead of crashing.
 
-In real applications these costs add up. In a shopping cart, adding an item at the top or removing an out-of-stock item from the middle shifts the items after it. Finding that item takes a linear search. With large carts, that work slows the system. My own long Amazon cart made me wonder how much work each customer’s cart creates at that scale. The work grows with every item added, so a very large cart slows the system.
+In real applications these costs add up. In a shopping cart, adding an item at the top or removing an out-of-stock item from the middle shifts the items after it. Finding that item takes a linear search. My own long Amazon cart made me wonder how much work each customer’s cart creates at that scale. The work grows with every item added, so a very large cart slows the system.
