@@ -21,6 +21,10 @@ This assignment introduces Binary Search Trees (BSTs) and recursive tree operati
 5. Demonstrate edge cases.
 6. Create a real-world BST example.
 
+## Design Approah
+
+I added three pieces to the stub. A height method measured the longest path down the tree, which let me compare a balanced tree with a chain built from sorted input. A suggestions method collected every stored word that started with a given prefix. It skipped any subtree that could not contain a match, so it searched only the part of the tree where matching words could be. A small helper inserted the middle word of a sorted list first and then repeated on each half. This kept the dictionary tree balanced instead of letting sorted words form a chain.
+
 ## Real World Scenario
 
 I used a binary search tree to model a spell checker dictionary. Words compare alphabetically so the same rule applied. Smaller words went left and larger words went right. I loaded 13 words by inserting the middle word first which kept the tree balanced at height 3.
@@ -40,6 +44,8 @@ Your reflection should be approximately 150–200 words and address the followin
 3. Explain BST behavior and compare to how ordering works to create efficiency as compared to other data structures.
 
 ## Reflection
-In this assignment I learned how a binary search tree keeps its values ordered by sending every smaller value left and every larger value right. Writing the recursive insert, search and inorder methods showed me that one comparison at each node decides where a value belongs and where to look for it later. The first challenge I ran into was explaining why inorder traversal returns sorted output instead of just stating that it does. I overcame it by tracing the seven employee IDs through the tree. Through this process, I saw that the left subtree is always smaller and the right subtree is always larger. My second challenge was seeing that tree shape matters. When I inserted 1001 through 1007 in order, the tree became a chain with a height of 6 when starting with 1050 kept height 2.
+In this assignment I learned how a binary search tree keeps its values ordered by sending every smaller value left and every larger value right. Writing the recursive insert, search and inorder methods showed me that one comparison at each node decides where a value belongs and where to look for it later. The first challenge I ran into was explaining why inorder traversal returns sorted output instead of just stating that it does. I overcame it by tracing the seven employee IDs through the tree. Through this process, I saw that the left subtree is always smaller and the right subtree is always larger. My second challenge was seeing that tree shape matters. When I inserted 1001 through 1007 in order, the tree became a chain with a height of 6, while starting with 1050 kept the height at 2.
 
 A BST discards a whole subtree with each comparison, so a balanced tree searches in O(log N) time. A list checks items one by one in O(N). A sorted array can use binary search but inserting means shifting elements, while a BST inserts without shifting. The tradeoff is that an unbalanced BST falls back to O(N).
+
+https://github.com/McIvy/cmsc315-discussions/tree/main/Unit4_Trees/discussion
